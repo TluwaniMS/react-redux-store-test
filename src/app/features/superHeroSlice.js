@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { SuperHeroes } from "../sampleData/superHeroes";
 
+const initialState = SuperHeroes
+
 const superHeroSlice = createSlice({
   name: "superHeroes",
-  initialState: {
-    value: SuperHeroes
-  },
+  initialState,
   reducers: {}
 });
 
