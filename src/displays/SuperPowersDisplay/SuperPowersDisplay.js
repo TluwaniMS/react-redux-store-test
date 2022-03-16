@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const SuperPowersDisplay = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+const SuperPowersDisplay = ({ superPower }) => {
+  return (
+    <Card>
+      <CardContent>{superPower.power}</CardContent>
+    </Card>
+  );
 };
 
 export default SuperPowersDisplay;

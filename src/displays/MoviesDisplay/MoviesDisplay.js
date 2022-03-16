@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 
-const MoviesDisplay = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+const MoviesDisplay = ({ movie }) => {
+  return (
+    <Card>
+      <CardContent>{movie.title}</CardContent>
+    </Card>
+  );
 };
 
 export default MoviesDisplay;
