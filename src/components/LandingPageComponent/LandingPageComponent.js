@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import MoviesDisplay from "../../displays/MoviesDisplay/MoviesDisplay";
 import SuperHeroesDisplay from "../../displays/SuperHeroesDisplay/SuperHeroesDisplay";
 import SuperPowersDisplay from "../../displays/SuperPowersDisplay/SuperPowersDisplay";
+import "./LandingPageComponent.css";
 
 const LandingPageComponent = () => {
   const movies = useSelector((state) => state.movies);

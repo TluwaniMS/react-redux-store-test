@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 
 const MoviesDisplay = ({ movie }) => {
   return (
-    <Card>
+    <Card variant="outlined">
       <CardContent>{movie.title}</CardContent>
     </Card>
   );

@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 
 const SuperHeroesDisplay = ({ superHero }) => {
   return (
-    <Card>
+    <Card variant="outlined">
       <CardContent>{superHero.name}</CardContent>
     </Card>
   );
