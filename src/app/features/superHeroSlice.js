@@ -9,9 +9,12 @@ const superHeroSlice = createSlice({
   reducers: {
     createSuperHero: (state, action) => {
       state.push(action.payload);
+    },
+    deleteSuperHero: (state, action) => {
+      state = state.filter((hero) => hero._id !== action.payload);
     }
   }
 });
 
-export const { createSuperHero } = superHeroSlice.actions;
+export const { createSuperHero, deleteSuperHero } = superHeroSlice.actions;
 export default superHeroSlice.reducer;

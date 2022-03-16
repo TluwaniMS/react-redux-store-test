@@ -9,9 +9,12 @@ const superPowerSlice = createSlice({
   reducers: {
     createSuperPower: (state, action) => {
       state.push(action.payload);
+    },
+    deleteSuperPower: (state, action) => {
+      state = state.filter((power) => power._id !== action.payload);
     }
   }
 });
 
-export const { createSuperPower } = superPowerSlice.actions;
+export const { createSuperPower, deleteSuperPower } = superPowerSlice.actions;
 export default superPowerSlice.reducer;

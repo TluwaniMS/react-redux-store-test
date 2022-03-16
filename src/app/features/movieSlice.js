@@ -9,9 +9,12 @@ const movieSlice = createSlice({
   reducers: {
     createMovie: (state, action) => {
       state.push(action.payload);
+    },
+    deleteMovie: (state, action) => {
+      state = state.filter((movie) => movie._id !== action.paylod);
     }
   }
 });
 
-export const { createMovie } = movieSlice.actions;
+export const { createMovie, deleteMovie } = movieSlice.actions;
 export default movieSlice.reducer;
