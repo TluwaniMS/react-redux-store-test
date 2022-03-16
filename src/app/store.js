@@ -5,8 +5,8 @@ import superPowerSlice from "./features/superPowerSlice";
 
 export default configureStore({
   reducer: {
-    movie: movieSlice,
-    superHero: superHeroSlice,
-    superPower: superPowerSlice
+    movies: movieSlice,
+    superHeroes: superHeroSlice,
+    superPowers: superPowerSlice
   }
 });
