@@ -1,3 +1,4 @@
+import { Link } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
 import MoviesDisplay from "../../displays/MoviesDisplay/MoviesDisplay";
@@ -11,10 +12,36 @@ const LandingPageComponent = () => {
 
   return (
     <div>
-      <div>Hello World!!</div>
-      <MoviesDisplay />
-      <SuperHeroesDisplay />
-      <SuperPowersDisplay />
+      <div className="landing-page-section-container">
+        <div className="landing-page-section-header">Movies</div>
+        <div className="landing-page-sectioned-content-container">
+          {movies.map((movie) => (
+            <Link>
+              <MoviesDisplay movie={movie} />
+            </Link>
+          ))}
+        </div>
+      </div>
+      <div className="landing-page-section-container">
+        <div className="landing-page-section-header">Super Heroes</div>
+        <div className="landing-page-sectioned-content-container">
+          {superHeroes.map((superHero) => (
+            <Link>
+              <SuperHeroesDisplay superHero={superHero} />
+            </Link>
+          ))}
+        </div>
+      </div>
+      <div className="landing-page-section-container">
+        <div className="landing-page-section-header">Super Powers</div>
+        <div className="landing-page-sectioned-content-container">
+          {superPowers.map((superPower) => (
+            <Link>
+              <SuperPowersDisplay superPower={superPower} />
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
