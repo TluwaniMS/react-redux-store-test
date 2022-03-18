@@ -1,5 +1,7 @@
 import { Link } from "@mui/material";
 import React from "react";
+import Button from "@mui/material/Button";
+import AddIcon from "@mui/icons-material/Add";
 import { useSelector } from "react-redux";
 import MoviesDisplay from "../../displays/MoviesDisplay/MoviesDisplay";
 import SuperHeroesDisplay from "../../displays/SuperHeroesDisplay/SuperHeroesDisplay";
@@ -22,6 +24,11 @@ const LandingPageComponent = () => {
             </Link>
           ))}
         </div>
+        <div className="landing-page-sectioned-button-container">
+          <Button variant="outlined" startIcon={<AddIcon />}>
+            Create Movie
+          </Button>
+        </div>
       </div>
       <div className="landing-page-section-container">
         <div className="landing-page-section-header">Super Heroes</div>
@@ -32,6 +39,11 @@ const LandingPageComponent = () => {
             </Link>
           ))}
         </div>
+        <div className="landing-page-sectioned-button-container">
+          <Button variant="outlined" startIcon={<AddIcon />}>
+            Create Super Hero
+          </Button>
+        </div>
       </div>
       <div className="landing-page-section-container">
         <div className="landing-page-section-header">Super Powers</div>
@@ -41,6 +53,11 @@ const LandingPageComponent = () => {
               <SuperPowersDisplay superPower={superPower} index={index} />
             </Link>
           ))}
+        </div>
+        <div className="landing-page-sectioned-button-container">
+          <Button variant="outlined" startIcon={<AddIcon />}>
+            Create Super Power
+          </Button>
         </div>
       </div>
     </div>
