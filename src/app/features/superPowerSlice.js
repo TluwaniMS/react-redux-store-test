@@ -11,7 +11,7 @@ const superPowerSlice = createSlice({
       state.push(action.payload);
     },
     deleteSuperPower: (state, action) => {
-      state = state.filter((power) => power._id !== action.payload);
+      state.splice(action.payload, 1);
     }
   }
 });

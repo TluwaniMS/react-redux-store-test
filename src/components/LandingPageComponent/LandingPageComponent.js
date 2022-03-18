@@ -16,9 +16,9 @@ const LandingPageComponent = () => {
       <div className="landing-page-section-container">
         <div className="landing-page-section-header">Movies</div>
         <div className="landing-page-sectioned-content-container">
-          {movies.map((movie) => (
-            <Link>
-              <MoviesDisplay movie={movie} />
+          {movies.map((movie, index) => (
+            <Link key={movie._id}>
+              <MoviesDisplay movie={movie} index={index} />
             </Link>
           ))}
         </div>
@@ -26,9 +26,9 @@ const LandingPageComponent = () => {
       <div className="landing-page-section-container">
         <div className="landing-page-section-header">Super Heroes</div>
         <div className="landing-page-sectioned-content-container">
-          {superHeroes.map((superHero) => (
-            <Link>
-              <SuperHeroesDisplay superHero={superHero} />
+          {superHeroes.map((superHero, index) => (
+            <Link key={superHero._id}>
+              <SuperHeroesDisplay superHero={superHero} index={index} />
             </Link>
           ))}
         </div>
@@ -36,9 +36,9 @@ const LandingPageComponent = () => {
       <div className="landing-page-section-container">
         <div className="landing-page-section-header">Super Powers</div>
         <div className="landing-page-sectioned-content-container">
-          {superPowers.map((superPower) => (
-            <Link>
-              <SuperPowersDisplay superPower={superPower} />
+          {superPowers.map((superPower, index) => (
+            <Link key={superPower._id}>
+              <SuperPowersDisplay superPower={superPower} index={index} />
             </Link>
           ))}
         </div>

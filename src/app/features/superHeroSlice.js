@@ -11,7 +11,7 @@ const superHeroSlice = createSlice({
       state.push(action.payload);
     },
     deleteSuperHero: (state, action) => {
-      state = state.filter((hero) => hero._id !== action.payload);
+      state.splice(action.payload, 1);
     }
   }
 });
