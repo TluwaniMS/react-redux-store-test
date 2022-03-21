@@ -3,6 +3,9 @@
 # About Repository:
 This is a basic react-js project that I created to learn the concepts of react-redux.
 
+# Software(s) required:
+* Latest stable version of Node Package Manager
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
