@@ -6,6 +6,12 @@ This is a basic react-js project that I created to learn the concepts of react-r
 # Software(s) required:
 * Latest stable version of Node Package Manager
 
+# Project Setup:
+
+* Step 1:
+
+Switch to the projects root directory and run "npm install" to install the rquired packages.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
