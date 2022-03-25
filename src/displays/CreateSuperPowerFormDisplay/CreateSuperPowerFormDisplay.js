@@ -11,6 +11,13 @@ const CreateSuperPowerFormDisplay = () => {
     description: yup.string().email("Please enter a valid description").required("Email is required")
   });
 
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm({ resolver: yupResolver(schema) });
+
   return (
     <div className="main-input-form-container">
       <div className="input-form">
