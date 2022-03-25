@@ -1,12 +1,15 @@
 import React from "react";
 import { ContenType } from "../../enumerators/ContentTypeEnum";
+import CreateMovieFormDisplay from "../CreateMovieFormDisplay/CreateMovieFormDisplay";
+import CreateSuperHeroFormDisplay from "../CreateSuperHeroFormDisplay/CreateSuperHeroFormDisplay";
+import CreateSuperPowerFormDisplay from "../CreateSuperPowerFormDisplay/CreateSuperPowerFormDisplay";
 
 const ModalFormDisplay = ({ contentType }) => {
   return (
     <div>
-      {contentType === ContenType.Movie && <div>Movie display</div>}
-      {contentType === ContenType.SuperHero && <div>SuperHero display</div>}
-      {contentType === ContenType.SuperPower && <div>SuperPower display</div>}
+      {contentType === ContenType.Movie && <CreateMovieFormDisplay />}
+      {contentType === ContenType.SuperHero && <CreateSuperHeroFormDisplay />}
+      {contentType === ContenType.SuperPower && <CreateSuperPowerFormDisplay />}
     </div>
   );
 };
