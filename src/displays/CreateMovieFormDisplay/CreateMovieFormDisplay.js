@@ -11,15 +11,19 @@ const CreateMovieFormDisplay = () => {
   });
 
   return (
-    <div>
-      <TextField id="outlined-textarea" label="Movie Title" placeholder="Movie Title" multiline />
-      <TextField
-        id="outlined-multiline-static"
-        label="About movie"
-        multiline
-        rows={4}
-        defaultValue="Movie description"
-      />
+    <div className="main-input-form-container">
+      <div className="input-form">
+        <TextField id="outlined-textarea" label="Movie Title" placeholder="Movie Title" multiline />
+      </div>
+      <div className="input-form">
+        <TextField
+          id="outlined-multiline-static"
+          label="About movie"
+          multiline
+          rows={4}
+          defaultValue="Movie description"
+        />
+      </div>
     </div>
   );
 };

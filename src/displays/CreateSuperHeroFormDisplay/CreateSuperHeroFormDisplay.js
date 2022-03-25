@@ -10,8 +10,10 @@ const CreateSuperHeroFormDisplay = () => {
   });
 
   return (
-    <div>
-      <TextField id="outlined-textarea" label="Super Hero Name" placeholder="Hero Name" multiline />
+    <div className="main-input-form-container">
+      <div className="input-form">
+        <TextField id="outlined-textarea" label="Super Hero Name" placeholder="Hero Name" multiline />
+      </div>
     </div>
   );
 };

@@ -11,15 +11,19 @@ const CreateSuperPowerFormDisplay = () => {
   });
 
   return (
-    <div>
-      <TextField id="outlined-textarea" label="Super power" placeholder="Super power" multiline />
-      <TextField
-        id="outlined-multiline-static"
-        label="Description"
-        multiline
-        rows={4}
-        defaultValue="Power description"
-      />
+    <div className="main-input-form-container">
+      <div className="input-form">
+        <TextField id="outlined-textarea" label="Super power" placeholder="Super power" multiline />
+      </div>
+      <div className="input-form">
+        <TextField
+          id="outlined-multiline-static"
+          label="Description"
+          multiline
+          rows={4}
+          defaultValue="Power description"
+        />
+      </div>
     </div>
   );
 };
