@@ -10,15 +10,22 @@ import SuperHeroesDisplay from "../../displays/SuperHeroesDisplay/SuperHeroesDis
 import SuperPowersDisplay from "../../displays/SuperPowersDisplay/SuperPowersDisplay";
 import "./LandingPageComponent.css";
 import ModalFormDisplay from "../../displays/ModalFormDisplay/ModalFormDisplay";
+import { ContenType } from "../../enumerators/ContentTypeEnum";
 
 const LandingPageComponent = () => {
   const [open, setOpen] = useState(false);
+  const [contentType, setContentType] = useState();
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   const movies = useSelector((state) => state.movies);
   const superHeroes = useSelector((state) => state.superHeroes);
   const superPowers = useSelector((state) => state.superPowers);
+
+  const displayModal = (typeOfContent) => {
+    setContentType(typeOfContent);
+    handleOpen();
+  };
 
   const style = {
     position: "absolute",
@@ -44,7 +51,7 @@ const LandingPageComponent = () => {
           ))}
         </div>
         <div className="landing-page-sectioned-button-container">
-          <Button variant="outlined" startIcon={<AddIcon />} onClick={handleOpen}>
+          <Button variant="outlined" startIcon={<AddIcon />} onClick={() => displayModal(ContenType.Movie)}>
             Create Movie
           </Button>
         </div>
@@ -59,7 +66,7 @@ const LandingPageComponent = () => {
           ))}
         </div>
         <div className="landing-page-sectioned-button-container">
-          <Button variant="outlined" startIcon={<AddIcon />} onClick={handleOpen}>
+          <Button variant="outlined" startIcon={<AddIcon />} onClick={() => displayModal(ContenType.SuperHero)}>
             Create Super Hero
           </Button>
         </div>
@@ -74,7 +81,7 @@ const LandingPageComponent = () => {
           ))}
         </div>
         <div className="landing-page-sectioned-button-container">
-          <Button variant="outlined" startIcon={<AddIcon />} onClick={handleOpen}>
+          <Button variant="outlined" startIcon={<AddIcon />} onClick={() => displayModal(ContenType.SuperPower)}>
             Create Super Power
           </Button>
         </div>
@@ -82,7 +89,7 @@ const LandingPageComponent = () => {
 
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
-          <ModalFormDisplay />
+          <ModalFormDisplay contentType={contentType} />
         </Box>
       </Modal>
     </div>
